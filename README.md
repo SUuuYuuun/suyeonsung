@@ -10,8 +10,6 @@
 
 - **Soongsil University** — 신소재공학과
 - **FNML Lab · Undergraduate Researcher** — 숭실대학교 신소재공학과 학부연구생, 신근영 교수 연구실 (2026-2)
-- **Seoul National University · Undergraduate Intern** — 서울대학교 학부인턴 (2026-2)
-
 소재의 구조와 물성을 이해하고, **데이터 기반으로 분석하고 검증하는** 공학도를 목표로 공부하고 있습니다.
 
 ---
