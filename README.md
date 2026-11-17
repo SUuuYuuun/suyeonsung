@@ -39,6 +39,25 @@
   - 기판 전위·BOX 전계 분포 분석으로 균일 BOX로는 불가능한 coupling–isolation 동시 확보 동작점 확인
 - **Keywords** — FD-SOI · Back-Bias · BOX Scaling · Device Simulation · TCAD
 
+### MIS / MIM 커패시터 제작 및 전기적 특성 평가
+`신소재공학실험2` 반도체 실습 · 2026-2
+
+> 웨이퍼 절단부터 유전막 증착, 전극 패터닝, C-V 측정까지 — 커패시터 소자 하나를 처음부터 끝까지 직접 만들고 평가
+
+```
+Dicing → ALD (TiO₂) → 두께 평가 → Evaporator (Al 전극) → 전극막 평가 → C-V 측정
+```
+
+| 단계 | 내용 | 장비 |
+| --- | --- | --- |
+| **① 유전막 증착** | p-Si / p⁺⁺-Si 기판에 TiO₂ ALD 증착 (Ti(Me₅Cp)(OMe)₃ / O₃, 500·680·862 cycle → 약 15–25 nm) | Diamond pen, ALD |
+| **② 유전막 두께 평가** | Cycle 수에 따른 증착 두께·선형성 평가, 광학 두께 vs 면밀도 환산 두께 비교·고찰 | Ellipsometry, XRF |
+| **③ 상부 전극 형성** | Shadow mask를 이용한 Al 상부 전극 열증착 및 패터닝 → MIS(Al/TiO₂/p-Si), MIM(Al/TiO₂/p⁺⁺-Si) 구조 제작 | Thermal Evaporator |
+| **④ 전극막 평가** | Al 두께별 면저항 측정 → 비저항 산출 및 두께 의존성 분석, SEM 표면 morphology·grain size 분석 | Stylus Profiler, 4-point probe, SEM |
+| **⑤ 전기적 특성 평가** | 전극 면적 측정, TiO₂ 두께·기판 종류에 따른 C-V 특성 측정 (accumulation–depletion–inversion) | Optical Microscope, Probe station |
+
+- **Keywords** — 반도체 공정 · 박막 증착 · ALD · PVD · 박막 계측 · MOS Capacitor · C-V
+
 ---
 
 ## Certifications
