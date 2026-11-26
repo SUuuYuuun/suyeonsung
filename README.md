@@ -9,7 +9,7 @@
 ## About Me
 
 - **Soongsil University** — 신소재공학과
-- **FNML Lab · Undergraduate Researcher** — 숭실대학교 신소재공학과 학부연구생, 신근영 교수 연구실 (2026.10 ~)
+- **FNML Lab · Undergraduate Researcher** — 숭실대학교 신소재공학과 학부연구생, 신근영 교수 연구실 (2026-2 ~)
   - Track: **B — Doped Graphene (N/P-doped Graphene)**
   - Topic: 질소/인 도핑 그래핀 기반 박막 전자파(EMI) 차폐 필름 연구 — GO 환원·도핑 공정 확립, XPS·Raman 특성 분석, 도핑 함량별 차폐 성능 평가
 - **Seoul National University · Undergraduate Research Intern** — 서울대학교 학부생 연구인턴, 김남준 교수 연구실 (2026-2 ~)
