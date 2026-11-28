@@ -43,11 +43,16 @@ IUPAC Name → Spoken Text → TTS → ASR (Whisper large-v3) → LLM 오류 보
 
 - **Motivation** — 일반 ASR은 화학 전문용어에서 오류가 잦고, `2-methyl → 3-methyl`처럼 한 글자만 틀려도 다른 분자가 됨. 정확한 이름을 구조로 바꾸는 도구(OPSIN)는 강하지만 오류가 섞인 이름에는 취약 → 그 사이를 LLM으로 메우는 것이 목표
 - **Scope** — 영어 · IUPAC 이름 기준, 범용 LLM(GPT · Gemini · Claude)으로 오류 보정을 먼저 시험한 뒤 개선 방향 결정
-- **My Role — 화학명 TTS 음성 데이터셋 구축**
+- **My Role — 화학명 TTS 음성 데이터셋 구축 + 1차 ASR 오류 분석**
   - IUPAC 화학명 5,000개 중 1차 실험용 1,000개(pilot set)를 TTS 음성으로 변환
   - 숫자·기호 오독을 막기 위한 발음용 텍스트 변환 규칙 적용 (예: `3,5-difluoroundecane` → `3 5 difluoroundecane`)
-  - edge-tts (en-US-AriaNeural) → mp3 + 16 kHz mono WAV, 파일별 정답 화학명을 담은 manifest로 ASR 오류율 측정 준비
-- **Next** — Whisper large-v3로 ASR 오류율·오류 유형(위치번호 · 할로젠 · 접미사) 분석 → LLM 보정 전·후 비교
+  - edge-tts (en-US-AriaNeural) → 16 kHz mono WAV, 파일별 정답 화학명을 담은 manifest 구성
+  - 정답 이름 1,000개를 OPSIN으로 구조 변환해 데이터셋의 SMILES와 대조 → 이름–구조 대응 1,000/1,000 검증
+  - Whisper large-v3(Colab T4 GPU)로 받아쓰기 → 표기 · 문자(CER) · **분자구조(OPSIN + RDKit)** 3단계 채점 및 오류 유형 분류
+- **Result (pilot 1,000)** — ASR 결과를 그대로 쓰면 정답 분자 복원 **12.1%** · 완전 일치 9.6% · CER 15.4%
+  - 주사슬 `-ane`을 `-caine`으로 인식(370건), 위치번호 쉼표 소실(`2,11 → 211`), `-yne`/`-ene` 접미사 거의 전부 오류 → LLM 보정의 필요성을 수치로 확인
+- **Next** — 범용 LLM(GPT · Gemini · Claude) 보정 전·후 구조 일치율 비교 → Agentic(OPSIN/RDKit 검증 루프) 방식 설계
+- 📄 **[진행 과정 · 문제 해결 기록 자세히 보기](projects/speech-to-molecule/README.md)**
 - **Keywords** — ASR · TTS · LLM · Agentic AI · IUPAC Nomenclature · SMILES · OPSIN · RDKit
 
 ### FD-SOI MOSFET 부분 박막 BOX 구조 TCAD 분석
